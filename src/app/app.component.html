@@ -1,14 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Angular To Do List {{ title }}!
+    Angular To Do List!
   </h1>
 </div>
 <div class="container">
   <h2>To Do List</h2>
-  <ul>
-    <li [class]="priorityColor(task)" *ngFor="let task of toDoList">{{ task.description }}, Priority: {{task.priority}}, Done: {{ task.done }} <button (click)="editTask(task)">Edit</button></li>
-  </ul>
+<app-task-list [childToDoList]="masterToDoList" (clickSender)="editTask($event)"></app-task-list>
 
   <div *ngIf="selectedTask">
     <h3>{{selectedTask.description}}</h3>
