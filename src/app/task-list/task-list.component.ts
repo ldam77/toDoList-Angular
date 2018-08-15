@@ -9,9 +9,15 @@ import { Task } from '../models/task.model';
 export class TaskListComponent {
   @Input() childToDoList: Task[];
   @Output() clickSender = new EventEmitter();
+  @Output() clickDelete = new EventEmitter();
+
 
   editButtonClicked(taskToEdit: Task) {
     this.clickSender.emit(taskToEdit);
+  }
+
+  deleteButtonClicked(taskToDelete: Task) {
+    this.clickDelete.emit(taskToDelete);
   }
 
   priorityColor(task){

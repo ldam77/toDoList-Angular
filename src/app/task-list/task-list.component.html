@@ -9,5 +9,6 @@
     <input *ngIf="currentTask.done === true" type="checkbox" checked (click)="toggleDone(currentTask, false)"/>
     <input *ngIf="currentTask.done === false" type="checkbox" (click)="toggleDone(currentTask, true)"/>
     <button (click)="editButtonClicked(currentTask)">Edit!</button>
+    <button class="btn btn-danger" (click)="deleteButtonClicked(currentTask)">Delete!</button>
   </li>
 </ul>

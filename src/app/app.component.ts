@@ -20,6 +20,11 @@ export class AppComponent {
     this.selectedTask = clickedTask;
   }
 
+  deleteTask(clickedTask) {
+    let index = this.masterToDoList.indexOf(clickedTask);
+    this.masterToDoList.splice(index,1);
+  }
+
 
   finishEditing(){
     this.selectedTask = null;

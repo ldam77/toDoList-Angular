@@ -6,7 +6,7 @@
 </div>
 <div class="container">
   <h2>To Do List</h2>
-  <app-task-list [childToDoList]="masterToDoList" (clickSender)="editTask($event)"></app-task-list>
+  <app-task-list [childToDoList]="masterToDoList" (clickSender)="editTask($event)" (clickDelete)="deleteTask($event)"></app-task-list>
 
   <app-edit-task [childSelectedTask]="selectedTask" (clickedDone)="finishEditing()"></app-edit-task>
 
