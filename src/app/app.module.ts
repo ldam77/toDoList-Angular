@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AlertModule } from 'ngx-bootstrap';
 import { FormsModule }  from '@angular/forms';
+import { CompletenessPipe } from './completeness.pipe';
 
 
 import { AppComponent } from './app.component';
@@ -15,7 +16,8 @@ import { NewTaskComponent } from './new-task/new-task.component';
     AppComponent,
     TaskListComponent,
     EditTaskComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    CompletenessPipe
   ],
   imports: [
     BrowserModule,
