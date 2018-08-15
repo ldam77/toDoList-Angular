@@ -10,4 +10,6 @@
 
   <app-edit-task [childSelectedTask]="selectedTask" (clickedDone)="finishEditing()"></app-edit-task>
 
+  <app-new-task (sendTask)="addNewTask($event)"></app-new-task>
+
 </div>

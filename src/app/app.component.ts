@@ -7,7 +7,7 @@ import { Task } from './models/task.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
   masterToDoList: Task[] = [
     new Task('Mow Lawn', 1),
     new Task('Organize Closet', 3),
@@ -23,6 +23,10 @@ export class AppComponent {
 
   finishEditing(){
     this.selectedTask = null;
+  }
+
+  addNewTask(newTask: Task) {
+    this.masterToDoList.push(newTask);
   }
 
 }
